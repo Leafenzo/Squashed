@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_prismarine_shard": {
+    "has_prismarine_crystal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:prismarine_shard"
+              "minecraft:prismarine_crystal"
             ]
           }
         ]
@@ -15,14 +15,14 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:prismarine_crystal_block_from_prismarine_shard"
+        "recipe": "minecraft:prismarine_crystal_block_from_prismarine_crystal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_prismarine_shard",
+      "has_prismarine_crystal",
       "has_the_recipe"
     ]
   ],

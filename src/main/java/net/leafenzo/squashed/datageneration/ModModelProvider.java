@@ -167,8 +167,12 @@ public class ModModelProvider extends FabricModelProvider {
         for(Block block : ModBlocks.COMPACTED_DIORITE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
         for(Block block : ModBlocks.COMPACTED_GRANITE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
         for(Block block : ModBlocks.COMPACTED_DIRT) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
+        for(Block block : ModBlocks.COMPACTED_COARSE_DIRT) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
+        for(Block block : ModBlocks.COMPACTED_GRASS_BLOCK) { blockStateModelGenerator.registerSingleton(block, TexturedModel.LEAVES); }
         for(Block block : ModBlocks.COMPACTED_SAND) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
+        for(Block block : ModBlocks.COMPACTED_SANDSTONE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
         for(Block block : ModBlocks.COMPACTED_RED_SAND) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
+        for(Block block : ModBlocks.COMPACTED_RED_SANDSTONE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
         for(Block block : ModBlocks.COMPACTED_DRIPSTONE_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
         for(Block block : ModBlocks.COMPACTED_CALCITE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
         for(Block block : ModBlocks.COMPACTED_MUD) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
@@ -206,6 +210,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerParented(ModBlocks.WEATHERED_COMPRESSED_COPPER_BLOCK, ModBlocks.WAXED_WEATHERED_COMPRESSED_COPPER_BLOCK);
         blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_COMPRESSED_COPPER_BLOCK, ModBlocks.WAXED_OXIDIZED_COMPRESSED_COPPER_BLOCK);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_TERRACOTTA);
+        for(Block block : ModBlocks.ALL_COMPACTED_TERRACOTTA_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WHITE_DYE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ORANGE_DYE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MAGENTA_DYE_BLOCK);

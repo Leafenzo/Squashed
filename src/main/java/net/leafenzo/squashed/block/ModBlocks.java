@@ -34,6 +34,7 @@ public class ModBlocks {
     public static final HashMap<Block, Integer> COMPRESSION_TIER_FROM_BLOCK = new HashMap<Block, Integer>();
     public static final ArrayList<Block> TROPICAL_FISH_BLOCKS = new ArrayList<Block>();
     public static final ArrayList<Block> DYE_BLOCKS = new ArrayList<Block>();
+    public static final ArrayList<Block> ALL_COMPACTED_TERRACOTTA_BLOCKS = new ArrayList<Block>();
     public static final ArrayList<Block> ALL_COMPACTED_WOOL_BLOCKS = new ArrayList<Block>();
 
 
@@ -166,17 +167,41 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT).strength(1.0f, 6.0f)),
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT).strength(1.2f, 99.0f))
     );
+    public static final Block[] COMPACTED_COARSE_DIRT = registerCompactedBlockSet("coarse_dirt",
+            new Block(FabricBlockSettings.copyOf(Blocks.COARSE_DIRT).strength(0.8f)),
+            new Block(FabricBlockSettings.copyOf(Blocks.COARSE_DIRT).strength(0.8f)),
+            new Block(FabricBlockSettings.copyOf(Blocks.COARSE_DIRT).strength(1.0f, 6.0f)),
+            new Block(FabricBlockSettings.copyOf(Blocks.COARSE_DIRT).strength(1.2f, 99.0f))
+    );
+    public static final Block[] COMPACTED_GRASS_BLOCK = registerCompactedBlockSet("grass_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK).strength(0.8f)),
+            new Block(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK).strength(0.8f)),
+            new Block(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK).strength(1.0f, 6.0f)),
+            new Block(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK).strength(1.2f, 99.0f))
+    );
     public static final Block[] COMPACTED_SAND = registerCompactedBlockSet("sand",
             new Block(FabricBlockSettings.copyOf(Blocks.SAND).strength(0.8f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
             new Block(FabricBlockSettings.copyOf(Blocks.SAND).strength(1.2f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
             new Block(FabricBlockSettings.copyOf(Blocks.SAND).strength(1.2f, 6.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
             new Block(FabricBlockSettings.copyOf(Blocks.SAND).strength(2.0f, 99.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE))
     );
+    public static final Block[] COMPACTED_SANDSTONE = registerCompactedBlockSet("sandstone",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE).strength(1.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE).strength(1.4f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE).strength(1.4f, 6.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE).strength(2.0f, 99.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE))
+    );
     public static final Block[] COMPACTED_RED_SAND = registerCompactedBlockSet("red_sand",
             new Block(FabricBlockSettings.copyOf(Blocks.RED_SAND).strength(0.8f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
             new Block(FabricBlockSettings.copyOf(Blocks.RED_SAND).strength(1.2f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
             new Block(FabricBlockSettings.copyOf(Blocks.RED_SAND).strength(1.2f, 6.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
             new Block(FabricBlockSettings.copyOf(Blocks.RED_SAND).strength(2.0f, 99.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE))
+    );
+    public static final Block[] COMPACTED_RED_SANDSTONE = registerCompactedBlockSet("red_sandstone",
+            new Block(FabricBlockSettings.copyOf(Blocks.RED_SANDSTONE).strength(1.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new Block(FabricBlockSettings.copyOf(Blocks.RED_SANDSTONE).strength(1.4f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new Block(FabricBlockSettings.copyOf(Blocks.RED_SANDSTONE).strength(1.4f, 6.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new Block(FabricBlockSettings.copyOf(Blocks.RED_SANDSTONE).strength(2.0f, 99.0f).instrument(Instrument.SNARE).requiresTool().sounds(BlockSoundGroup.STONE))
     );
     public static final Block[] COMPACTED_DRIPSTONE_BLOCKS = registerCompactedBlockSet("dripstone_block",
             new Block(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK).strength(1.2f).requiresTool().instrument(Instrument.BASEDRUM)),
@@ -374,6 +399,24 @@ public class ModBlocks {
     public static final Block RED_DYE_BLOCK = registerBlock("red_dye_block", createDyeBlock(FabricBlockSettings.create().mapColor(MapColor.RED).strength(0.3f).sounds(BlockSoundGroup.FROGSPAWN))/*,ModItemGroups.SQUASHED*/);
     public static final Block BLACK_DYE_BLOCK = registerBlock("black_dye_block", createDyeBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).strength(0.3f).sounds(BlockSoundGroup.FROGSPAWN))/*,ModItemGroups.SQUASHED*/);
     //TODO add mint compat for more dye blocks
+
+    public static final Block COMPRESSED_TERRACOTTA = registerBlock("compressed_terracotta", new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.BASEDRUM).requiresTool().strength(2f,6f).sounds(BlockSoundGroup.PACKED_MUD))/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_WHITE_TERRACOTTA = registerBlock("compressed_white_terracotta", createCompressedTerracottaBlock(DyeColor.WHITE)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_ORANGE_TERRACOTTA = registerBlock("compressed_orange_terracotta", createCompressedTerracottaBlock(DyeColor.ORANGE)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_MAGENTA_TERRACOTTA = registerBlock("compressed_magenta_terracotta", createCompressedTerracottaBlock(DyeColor.MAGENTA)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_LIGHT_BLUE_TERRACOTTA = registerBlock("compressed_light_blue_terracotta", createCompressedTerracottaBlock(DyeColor.LIGHT_BLUE)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_YELLOW_TERRACOTTA = registerBlock("compressed_yellow_terracotta", createCompressedTerracottaBlock(DyeColor.YELLOW)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_LIME_TERRACOTTA = registerBlock("compressed_lime_terracotta", createCompressedTerracottaBlock(DyeColor.LIME)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_PINK_TERRACOTTA = registerBlock("compressed_pink_terracotta", createCompressedTerracottaBlock(DyeColor.PINK)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_GRAY_TERRACOTTA = registerBlock("compressed_gray_terracotta", createCompressedTerracottaBlock(DyeColor.GRAY)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_LIGHT_GRAY_TERRACOTTA = registerBlock("compressed_light_gray_terracotta", createCompressedTerracottaBlock(DyeColor.LIGHT_GRAY)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_CYAN_TERRACOTTA = registerBlock("compressed_cyan_terracotta", createCompressedTerracottaBlock(DyeColor.CYAN)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_PURPLE_TERRACOTTA = registerBlock("compressed_purple_terracotta", createCompressedTerracottaBlock(DyeColor.PURPLE)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_BLUE_TERRACOTTA = registerBlock("compressed_blue_terracotta", createCompressedTerracottaBlock(DyeColor.BLUE)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_BROWN_TERRACOTTA = registerBlock("compressed_brown_terracotta", createCompressedTerracottaBlock(DyeColor.BROWN)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_GREEN_TERRACOTTA = registerBlock("compressed_green_terracotta", createCompressedTerracottaBlock(DyeColor.GREEN)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_RED_TERRACOTTA = registerBlock("compressed_red_terracotta", createCompressedTerracottaBlock(DyeColor.RED)/*,ModItemGroups.SQUASHED*/);
+    public static final Block COMPRESSED_BLACK_TERRACOTTA = registerBlock("compressed_black_terracotta", createCompressedTerracottaBlock(DyeColor.BLACK)/*,ModItemGroups.SQUASHED*/);
 
 
     public static final Block WHITE_COMPRESSED_WOOL = registerBlock("white_compressed_wool", createCompressedWoolBlock(DyeColor.WHITE)/*,ModItemGroups.SQUASHED*/);
@@ -636,6 +679,12 @@ public class ModBlocks {
         ALL_COMPACTED_WOOL_BLOCKS.add(block);
         return block;
     }
+    private static Block createCompressedTerracottaBlock(DyeColor color) {
+        Block block = new Block(FabricBlockSettings.copyOf(Blocks.WHITE_TERRACOTTA).mapColor(color).requiresTool().strength(2f,6f).sounds(BlockSoundGroup.PACKED_MUD).instrument(Instrument.BASEDRUM));
+        ALL_COMPACTED_TERRACOTTA_BLOCKS.add(block);
+        return block;
+    }
+
 
     private static Block createDyeBlock(FabricBlockSettings settings) {
         Block block = new Block(settings.instrument(Instrument.FLUTE));

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "squashed:red_sandstone_reverse",
+  "ingredients": [
+    {
+      "item": "squashed:squashed_red_sandstone"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "squashed:dense_red_sandstone"
+  }
+}

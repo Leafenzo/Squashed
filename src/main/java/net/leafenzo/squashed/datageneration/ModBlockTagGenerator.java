@@ -105,13 +105,27 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
             getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE).add(block);
             getOrCreateTagBuilder(BlockTags.DIRT).add(block);
         }
+        for(Block block : ModBlocks.COMPACTED_COARSE_DIRT) {
+            getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE).add(block);
+            getOrCreateTagBuilder(BlockTags.DIRT).add(block);
+        }
+        for(Block block : ModBlocks.COMPACTED_GRASS_BLOCK) {
+            getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE).add(block);
+            getOrCreateTagBuilder(BlockTags.DIRT).add(block);
+        }
         for(Block block : ModBlocks.COMPACTED_SAND) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
             getOrCreateTagBuilder(BlockTags.SAND).add(block);
         }
+        for(Block block : ModBlocks.COMPACTED_SANDSTONE) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
         for(Block block : ModBlocks.COMPACTED_RED_SAND) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
             getOrCreateTagBuilder(BlockTags.SAND).add(block);
+        }
+        for(Block block : ModBlocks.COMPACTED_RED_SANDSTONE) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
         for(Block block : ModBlocks.COMPACTED_DRIPSTONE_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
@@ -284,7 +298,9 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         getOrCreateTagBuilder(BlockTags.WOOL).add(block);
         getOrCreateTagBuilder(ModTags.Blocks.CAT_PLAYS_WITH).add(block);
     }
-
+    for(Block block : ModBlocks.ALL_COMPACTED_TERRACOTTA_BLOCKS) {
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+    }
     for(Block block : ModBlocks.TROPICAL_FISH_BLOCKS) {
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE).add(block);
     }

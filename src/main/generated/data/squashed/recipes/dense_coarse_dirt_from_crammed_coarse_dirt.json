@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "squashed:coarse_dirt",
+  "key": {
+    "#": {
+      "item": "squashed:crammed_coarse_dirt"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "squashed:dense_coarse_dirt"
+  },
+  "show_notification": true
+}

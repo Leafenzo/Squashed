@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "squashed:lime_terracotta",
+  "key": {
+    "#": {
+      "item": "minecraft:lime_terracotta"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "squashed:compressed_lime_terracotta"
+  },
+  "show_notification": true
+}

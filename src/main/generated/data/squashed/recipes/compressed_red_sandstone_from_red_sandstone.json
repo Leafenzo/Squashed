@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "squashed:red_sandstone",
+  "key": {
+    "#": {
+      "item": "minecraft:red_sandstone"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "squashed:compressed_red_sandstone"
+  },
+  "show_notification": true
+}

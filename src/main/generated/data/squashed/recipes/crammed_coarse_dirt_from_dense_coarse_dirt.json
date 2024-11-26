@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "squashed:coarse_dirt_reverse",
+  "ingredients": [
+    {
+      "item": "squashed:dense_coarse_dirt"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "squashed:crammed_coarse_dirt"
+  }
+}

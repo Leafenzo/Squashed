@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "squashed:green_terracotta_reverse",
+  "ingredients": [
+    {
+      "item": "squashed:compressed_green_terracotta"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "minecraft:green_terracotta"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "squashed:block/compressed_grass_block"
+  }
+}

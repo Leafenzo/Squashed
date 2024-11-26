@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dense_red_sandstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "squashed:dense_red_sandstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:squashed_red_sandstone_from_dense_red_sandstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_dense_red_sandstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:squashed_red_sandstone_from_dense_red_sandstone"
+    ]
+  },
+  "sends_telemetry_event": false
+}

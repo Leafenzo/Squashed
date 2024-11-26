@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "squashed:sandstone",
+  "key": {
+    "#": {
+      "item": "minecraft:sandstone"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "squashed:compressed_sandstone"
+  },
+  "show_notification": true
+}

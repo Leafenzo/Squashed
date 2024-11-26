@@ -133,10 +133,10 @@ public class ModFabricRegistries {
             registry.add(item, 300);
         }
 
-        registry.add(ModBlocks.CHARCOAL_BLOCK, 800);  //THE BELOW NOTES ON TIME ARE FALSE
+        registry.add(ModBlocks.CHARCOAL_BLOCK, 16000);  //THE BELOW NOTES ON TIME ARE FALSE
         // registerCompactedFuels(registry, ModBlocks.COMPACTED_COAL_BLOCKS, 16000); //7200 S (2 hours), 64800 S (18 hours), 583200 S (6.75 days), 5248800 S (60 days) // fabric doesn't allow it :(
                                                         //coal block =  13.33 minutes
-        registry.add(ModBlocks.COMPACTED_COAL_BLOCKS[0], 7200); //2 hours
+        registry.add(ModBlocks.COMPACTED_COAL_BLOCKS[0], 32767); //2 hours
         registry.add(ModBlocks.COMPACTED_COAL_BLOCKS[1], 32767); //9 hours
         //registry.add(ModBlocks.COMPACTED_COAL_BLOCKS[2], 655340); //9 hours //Don't let people waste it if it doesn't actually improve nothin. //TODO ask el about this
         //registry.add(ModBlocks.COMPACTED_COAL_BLOCKS[3], 655340); //9 hours
@@ -173,7 +173,8 @@ public class ModFabricRegistries {
 
     private static void registerCompactedFuels(FuelRegistry registry, ItemConvertible[] compactedItems, int burnTimePerOne) {
         for (int i = 0; i < compactedItems.length; i++) {
-            int t = Math.max(burnTimePerOne * (9 * (i+1)), 32767);
+            Double d = new Double(burnTimePerOne * Math.pow(9,(i+1)));
+            int t = Math.min(d.intValue(), 32767);
 //                System.out.println("registering burn time of: " + t + " ticks for " + compactedItems[i].asItem().getName());
             registry.add(compactedItems[i], t);
         }

@@ -208,8 +208,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.DIORITE, ModBlocks.COMPACTED_DIORITE);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.GRANITE, ModBlocks.COMPACTED_GRANITE);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.DIRT, ModBlocks.COMPACTED_DIRT);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.COARSE_DIRT, ModBlocks.COMPACTED_COARSE_DIRT);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.GRASS_BLOCK, ModBlocks.COMPACTED_GRASS_BLOCK);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.SAND, ModBlocks.COMPACTED_SAND);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.SANDSTONE, ModBlocks.COMPACTED_SANDSTONE);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.RED_SAND, ModBlocks.COMPACTED_RED_SAND);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.RED_SANDSTONE, ModBlocks.COMPACTED_RED_SANDSTONE);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.DRIPSTONE_BLOCK, ModBlocks.COMPACTED_DRIPSTONE_BLOCKS);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.CALCITE, ModBlocks.COMPACTED_CALCITE);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.MUD, ModBlocks.COMPACTED_MUD);
@@ -289,6 +293,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.GREEN_WOOL, ModBlocks.GREEN_COMPRESSED_WOOL);
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.RED_WOOL, ModBlocks.RED_COMPRESSED_WOOL);
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.BLACK_WOOL, ModBlocks.BLACK_COMPRESSED_WOOL);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.TERRACOTTA, ModBlocks.COMPRESSED_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.WHITE_TERRACOTTA, ModBlocks.COMPRESSED_WHITE_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.ORANGE_TERRACOTTA, ModBlocks.COMPRESSED_ORANGE_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.MAGENTA_TERRACOTTA, ModBlocks.COMPRESSED_MAGENTA_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.LIGHT_BLUE_TERRACOTTA, ModBlocks.COMPRESSED_LIGHT_BLUE_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.YELLOW_TERRACOTTA, ModBlocks.COMPRESSED_YELLOW_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.LIME_TERRACOTTA, ModBlocks.COMPRESSED_LIME_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.PINK_TERRACOTTA, ModBlocks.COMPRESSED_PINK_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.GRAY_TERRACOTTA, ModBlocks.COMPRESSED_GRAY_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.LIGHT_GRAY_TERRACOTTA, ModBlocks.COMPRESSED_LIGHT_GRAY_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.CYAN_TERRACOTTA, ModBlocks.COMPRESSED_CYAN_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.PURPLE_TERRACOTTA, ModBlocks.COMPRESSED_PURPLE_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.BLUE_TERRACOTTA, ModBlocks.COMPRESSED_BLUE_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.BROWN_TERRACOTTA, ModBlocks.COMPRESSED_BROWN_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.GREEN_TERRACOTTA, ModBlocks.COMPRESSED_GREEN_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.RED_TERRACOTTA, ModBlocks.COMPRESSED_RED_TERRACOTTA);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Items.BLACK_TERRACOTTA, ModBlocks.COMPRESSED_BLACK_TERRACOTTA);
         offerCompressedWoolDyeingRecipe(exporter, ModBlocks.ORANGE_COMPRESSED_WOOL, Items.ORANGE_DYE);
         offerCompressedWoolDyeingRecipe(exporter, ModBlocks.MAGENTA_COMPRESSED_WOOL, Items.MAGENTA_DYE);
         offerCompressedWoolDyeingRecipe(exporter, ModBlocks.LIGHT_BLUE_COMPRESSED_WOOL, Items.LIGHT_BLUE_DYE);
@@ -382,7 +403,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerTropicalFishBlockVariantRecipe(exporter, ModBlocks.TROPICAL_FISH_BLOCK_S, Items.CLAY_BALL);
         offerTropicalFishBlockVariantRecipe(exporter, ModBlocks.TROPICAL_FISH_BLOCK_T, Items.BAMBOO);
 
-        offerNamingSafeReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items.PRISMARINE_SHARD, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMARINE_CRYSTAL_BLOCK);
+        offerNamingSafeReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items.PRISMARINE_CRYSTALS, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMARINE_CRYSTAL_BLOCK);
         offerNamingSafeReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items.GLOW_INK_SAC, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLOW_INK_SAC_BLOCK);
         offerReversible2x2CompactingRecipes(exporter, RecipeCategory.MISC, Items.SCUTE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCUTE_BLOCK);
         offerNamingSafeReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items.FEATHER, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FEATHER_BLOCK);

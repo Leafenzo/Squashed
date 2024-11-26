@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "squashed:grass_block_reverse",
+  "ingredients": [
+    {
+      "item": "squashed:crammed_grass_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "squashed:compressed_grass_block"
+  }
+}

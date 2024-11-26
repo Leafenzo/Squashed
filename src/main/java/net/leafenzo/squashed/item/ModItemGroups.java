@@ -27,11 +27,15 @@ public static ItemGroup SQUASHED_COMPACTED = Registry.register(Registries.ITEM_G
         FabricItemGroup.builder().displayName(Text.translatable("itemgroup.squashed_compacted_blocks"))
                 .icon(() -> new ItemStack(ModBlocks.COMPACTED_TUFF[2].asItem())).entries((displayContext, entries) -> {
                     for(Block block : ModBlocks.COMPACTED_DIRT) entries.add(block);
+                    for(Block block : ModBlocks.COMPACTED_COARSE_DIRT) entries.add(block);
+                    for(Block block : ModBlocks.COMPACTED_GRASS_BLOCK) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_MUD) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_CLAY) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_GRAVEL) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_SAND) entries.add(block);
+                    for(Block block : ModBlocks.COMPACTED_SANDSTONE) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_RED_SAND) entries.add(block);
+                    for(Block block : ModBlocks.COMPACTED_RED_SANDSTONE) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_BLUE_ICE) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_SNOW_BLOCKS) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_MOSS_BLOCKS) entries.add(block);
@@ -254,6 +258,23 @@ public static ItemGroup SQUASHED_COMPACTED = Registry.register(Registries.ITEM_G
                             entries.add(ModBlocks.PURPLE_COMPRESSED_WOOL);
                             entries.add(ModBlocks.MAGENTA_COMPRESSED_WOOL);
                             entries.add(ModBlocks.PINK_COMPRESSED_WOOL);
+                            entries.add(ModBlocks.COMPRESSED_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_WHITE_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_LIGHT_GRAY_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_GRAY_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_BLACK_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_BROWN_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_RED_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_ORANGE_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_YELLOW_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_LIME_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_GREEN_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_CYAN_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_LIGHT_BLUE_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_BLUE_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_PURPLE_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_MAGENTA_TERRACOTTA);
+                            entries.add(ModBlocks.COMPRESSED_PINK_TERRACOTTA);
                             entries.add(ModBlocks.TROPICAL_FISH_BLOCK_A);
                             entries.add(ModBlocks.TROPICAL_FISH_BLOCK_B);
                             entries.add(ModBlocks.TROPICAL_FISH_BLOCK_C);

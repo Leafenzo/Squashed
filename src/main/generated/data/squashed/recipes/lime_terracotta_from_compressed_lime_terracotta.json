@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "squashed:lime_terracotta_reverse",
+  "ingredients": [
+    {
+      "item": "squashed:compressed_lime_terracotta"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "minecraft:lime_terracotta"
+  }
+}

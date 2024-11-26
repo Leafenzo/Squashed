@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "squashed:yellow_terracotta",
+  "key": {
+    "#": {
+      "item": "minecraft:yellow_terracotta"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "squashed:compressed_yellow_terracotta"
+  },
+  "show_notification": true
+}

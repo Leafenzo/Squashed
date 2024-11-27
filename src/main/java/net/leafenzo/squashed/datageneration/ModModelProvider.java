@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.leafenzo.squashed.Super;
 import net.leafenzo.squashed.block.ModBlocks;
+import net.leafenzo.squashed.compat.dyemod.DyeModCompat;
 import net.leafenzo.squashed.data.client.ModTexturedModel;
 import net.leafenzo.squashed.item.ModItems;
 import net.leafenzo.squashed.state.ModProperties;
@@ -152,55 +153,153 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_MELON);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SUGARCANE_BLOCK);
 
-        for(Block block : ModBlocks.COMPACTED_SOUL_SAND) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_SOUL_SOIL) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_COBBLESTONE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_STONE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_ANDESITE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_GRAVEL) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_TUFF) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_BLACKSTONE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_OBSIDIAN) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_DEEPSLATE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_NETHERRACK) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_END_STONE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_DIORITE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_GRANITE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_DIRT) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_COARSE_DIRT) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_GRASS_BLOCK) { blockStateModelGenerator.registerSingleton(block, TexturedModel.LEAVES); }
-        for(Block block : ModBlocks.COMPACTED_SAND) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_SANDSTONE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_RED_SAND) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_RED_SANDSTONE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_DRIPSTONE_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_CALCITE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_MUD) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_MOSS_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_CLAY) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_MAGMA_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_SNOW_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_BASALT) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_COBBLED_DEEPSLATE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_SCULK) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_PRISMARINE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_BLUE_ICE) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_GLOWSTONE_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_RAW_IRON_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_RAW_GOLD_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_RAW_COPPER_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_REDSTONE_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_COAL_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_QUARTZ_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_IRON_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_NETHERITE_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_GOLD_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_DIAMOND_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_EMERALD_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_LAPIS_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_AMETHYST_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_BONE_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
-        for(Block block : ModBlocks.COMPACTED_COPPER_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
+        for (Block block : ModBlocks.COMPACTED_SOUL_SAND) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_SOUL_SOIL) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_COBBLESTONE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_STONE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_ANDESITE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_GRAVEL) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_TUFF) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_BLACKSTONE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_OBSIDIAN) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_DEEPSLATE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_NETHERRACK) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_END_STONE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_DIORITE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_GRANITE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_DIRT) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_COARSE_DIRT) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_GRASS_BLOCK) {
+            blockStateModelGenerator.registerSingleton(block, TexturedModel.LEAVES);
+        }
+        for (Block block : ModBlocks.COMPACTED_SAND) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_SANDSTONE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_RED_SAND) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_RED_SANDSTONE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_DRIPSTONE_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_CALCITE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_MUD) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_MOSS_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_CLAY) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_MAGMA_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_SNOW_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_BASALT) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_COBBLED_DEEPSLATE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_SCULK) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_PRISMARINE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_BLUE_ICE) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_GLOWSTONE_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_RAW_IRON_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_RAW_GOLD_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_RAW_COPPER_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_REDSTONE_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_COAL_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_QUARTZ_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_IRON_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_NETHERITE_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_GOLD_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_DIAMOND_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_EMERALD_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_LAPIS_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_AMETHYST_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_BONE_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.COMPACTED_COPPER_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
         //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_COPPER_BLOCK); // covered by compressed copper blocks
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXPOSED_COMPRESSED_COPPER_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WEATHERED_COMPRESSED_COPPER_BLOCK);
@@ -211,7 +310,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_COMPRESSED_COPPER_BLOCK, ModBlocks.WAXED_OXIDIZED_COMPRESSED_COPPER_BLOCK);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_TERRACOTTA);
-        for(Block block : ModBlocks.ALL_COMPACTED_TERRACOTTA_BLOCKS) { blockStateModelGenerator.registerCubeAllModelTexturePool(block); }
+        for (Block block : ModBlocks.ALL_COMPACTED_TERRACOTTA_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WHITE_DYE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ORANGE_DYE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MAGENTA_DYE_BLOCK);
@@ -227,7 +328,26 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BROWN_DYE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GREEN_DYE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLACK_DYE_BLOCK);
+        /* Datagen won't work on these due to only conditionally having a block defined. TODO: FIX THIS
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.ACORN_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.AMBER_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.ARTICHOKE_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.BANANA_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.CERULEAN_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.FUCHSIA_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.GRAPE_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.INDIGO_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.MAROON_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.MAUVE_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.MINT_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.MOLD_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.NAVY_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.PEACH_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.SAGE_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.SAP_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.SHAMROCK_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.VELVET_DYE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.VERMILION_DYE_BLOCK); */
         blockStateModelGenerator.registerAxisRotated(ModBlocks.WHITE_COMPRESSED_WOOL, ModTexturedModel.COMPRESSED_WOOL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.ORANGE_COMPRESSED_WOOL, ModTexturedModel.COMPRESSED_WOOL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.MAGENTA_COMPRESSED_WOOL, ModTexturedModel.COMPRESSED_WOOL);

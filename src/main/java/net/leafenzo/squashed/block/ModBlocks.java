@@ -686,7 +686,7 @@ public class ModBlocks {
     }
 
 
-    private static Block createDyeBlock(FabricBlockSettings settings) {
+    public static Block createDyeBlock(FabricBlockSettings settings) {
         Block block = new Block(settings.instrument(Instrument.FLUTE));
         DYE_BLOCKS.add(block);
         return block;
@@ -711,7 +711,7 @@ public class ModBlocks {
     }
 
     private static ToIntFunction<BlockState> createLightLevelFromProperty(int litLevel, BooleanProperty property) {
-        return state -> state.get(property) != false ? litLevel : 0;
+        return state -> state.get(property) ? litLevel : 0;
     }
 
     public static void registerModBlocks() {

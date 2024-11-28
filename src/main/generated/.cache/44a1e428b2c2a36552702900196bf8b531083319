@@ -1,5 +1,5 @@
-// 1.20.1	2024-11-24T11:31:55.3480194	Squashed/Tags for minecraft:block
-9d1677c752d44a97310e04b4185b9e6c2fb5b5d1 data\minecraft\tags\blocks\mineable\shovel.json
+// 1.20.1	2024-11-27T20:21:19.1618818	Squashed/Tags for minecraft:block
+41f5ac3640779db253b9046d3359d29e2e80f1cd data\minecraft\tags\blocks\mineable\shovel.json
 a90d4e33ce412a63016104ec9cfaf73e845115b3 data\minecraft\tags\blocks\needs_diamond_tool.json
 b9fca4a98fea5819ca15d9d3e9389ae5a2bf75a7 data\minecraft\tags\blocks\conduit_frame.json
 cde77903bdc94eb63859f90d62bf519ca8cb1e9d data\minecraft\tags\blocks\soul_fire_base_blocks.json
@@ -22,7 +22,7 @@ e1d5d59daea71decc3ea19436d0a12da391012c3 data\minecraft\tags\blocks\ice.json
 0acdf1b53b1892be705e87d07bda62072b61693c data\minecraft\tags\blocks\climbable.json
 35c23f3c1fa2b487b2a9de1838c051067b20c8f7 data\minecraft\tags\blocks\needs_stone_tool.json
 41e5b9012a8b7ba6d3aa5c22f45631e1640ed9b4 data\minecraft\tags\blocks\wither_immune.json
-bd393aa778ce4f63f0acf3880925bbbdf0ef27bd data\minecraft\tags\blocks\mineable\pickaxe.json
+03c702cac2da10929006f5d99184b89c33ff276f data\minecraft\tags\blocks\mineable\pickaxe.json
 efc303578b85b0aa1ed9200cf45bcba651837b55 data\minecraft\tags\blocks\logs_that_burn.json
 bdb7e6f52c88f912acd709ca763334d137259270 data\minecraft\tags\blocks\mushroom_grow_block.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\any_minable.json

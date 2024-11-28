@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "squashed:block/sap_dye_block"
+    }
+  }
+}

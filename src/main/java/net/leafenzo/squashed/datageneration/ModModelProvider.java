@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.leafenzo.squashed.Super;
 import net.leafenzo.squashed.block.ModBlocks;
-import net.leafenzo.squashed.compat.dyemod.DyeModCompat;
 import net.leafenzo.squashed.data.client.ModTexturedModel;
 import net.leafenzo.squashed.item.ModItems;
 import net.leafenzo.squashed.state.ModProperties;
@@ -111,6 +110,19 @@ public class ModModelProvider extends FabricModelProvider {
         else {
             blockStateModelGenerator.registerAxisRotated(block, TexturedModel.CUBE_COLUMN);
         }
+    }
+
+    private void generateBlockAssets(BlockStateModelGenerator blockStateModelGenerator, String id) {
+        //todo: doesn't properly generate blockstates yet
+        Identifier identifier = Identifier.tryParse(id);
+        if (identifier == null) return; // not a valid id
+        Identifier blockAssetId = identifier.withPrefixedPath("block/");
+        Identifier itemAssetId = identifier.withPrefixedPath("item/");
+        Identifier blockstateId = identifier.withPrefixedPath("blockstates/");
+        TexturedModel texturedModel = TexturedModel.getCubeAll(blockAssetId);
+        blockStateModelGenerator.modelCollector.accept(itemAssetId, new SimpleModelSupplier(blockAssetId));
+        // blockStateModelGenerator.modelCollector.accept(blockAssetId, new SimpleModelSupplier(blockAssetId));
+        texturedModel.getModel().upload(blockAssetId, TextureMap.all(blockAssetId), blockStateModelGenerator.modelCollector); // register a block model
     }
 
     @Override
@@ -309,8 +321,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerParented(ModBlocks.WEATHERED_COMPRESSED_COPPER_BLOCK, ModBlocks.WAXED_WEATHERED_COMPRESSED_COPPER_BLOCK);
         blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_COMPRESSED_COPPER_BLOCK, ModBlocks.WAXED_OXIDIZED_COMPRESSED_COPPER_BLOCK);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_TERRACOTTA);
-        for (Block block : ModBlocks.ALL_COMPACTED_TERRACOTTA_BLOCKS) {
+        for (Block block : ModBlocks.COMPACTED_TERRACOTTA) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        for (Block block : ModBlocks.ALL_COLORED_COMPACTED_TERRACOTTA_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WHITE_DYE_BLOCK);
@@ -328,26 +342,29 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BROWN_DYE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GREEN_DYE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_DYE_BLOCK);
-        /* Datagen won't work on these due to only conditionally having a block defined. TODO: FIX THIS
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.ACORN_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.AMBER_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.ARTICHOKE_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.BANANA_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.CERULEAN_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.FUCHSIA_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.GRAPE_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.INDIGO_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.MAROON_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.MAUVE_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.MINT_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.MOLD_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.NAVY_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.PEACH_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.SAGE_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.SAP_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.SHAMROCK_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.VELVET_DYE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DyeModCompat.VERMILION_DYE_BLOCK); */
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLACK_DYE_BLOCK);
+
+        generateBlockAssets(blockStateModelGenerator,"squashed:acorn_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:amber_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:artichoke_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:banana_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:cerulean_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:fuchsia_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:grape_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:indigo_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:maroon_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:mauve_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:mint_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:mold_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:navy_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:peach_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:periwinkle_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:sap_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:sage_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:shamrock_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:velvet_dye_block");
+        generateBlockAssets(blockStateModelGenerator,"squashed:vermilion_dye_block");
+
         blockStateModelGenerator.registerAxisRotated(ModBlocks.WHITE_COMPRESSED_WOOL, ModTexturedModel.COMPRESSED_WOOL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.ORANGE_COMPRESSED_WOOL, ModTexturedModel.COMPRESSED_WOOL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.MAGENTA_COMPRESSED_WOOL, ModTexturedModel.COMPRESSED_WOOL);

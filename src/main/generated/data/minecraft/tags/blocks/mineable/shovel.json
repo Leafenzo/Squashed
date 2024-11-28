@@ -42,6 +42,86 @@
     "squashed:red_dye_block",
     "squashed:black_dye_block",
     "#minecraft:any_minable",
+    {
+      "id": "squashed:acorn_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:amber_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:artichoke_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:banana_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:cerulean_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:fuchsia_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:grape_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:indigo_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:maroon_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:mauve_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:mint_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:mold_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:navy_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:peach_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:periwinkle_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:sage_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:sap_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:shamrock_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:velvet_dye_block",
+      "required": false
+    },
+    {
+      "id": "squashed:vermilion_dye_block",
+      "required": false
+    },
     "squashed:blaze_powder_block",
     "squashed:wheat_seed_block",
     "squashed:pumpkin_seed_block",

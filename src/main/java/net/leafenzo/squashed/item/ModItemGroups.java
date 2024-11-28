@@ -33,6 +33,7 @@ public static ItemGroup SQUASHED_COMPACTED = Registry.register(Registries.ITEM_G
                     for(Block block : ModBlocks.COMPACTED_GRASS_BLOCK) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_MUD) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_CLAY) entries.add(block);
+                    for(Block block : ModBlocks.COMPACTED_TERRACOTTA) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_GRAVEL) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_SAND) entries.add(block);
                     for(Block block : ModBlocks.COMPACTED_SANDSTONE) entries.add(block);
@@ -260,7 +261,6 @@ public static ItemGroup SQUASHED_COMPACTED = Registry.register(Registries.ITEM_G
                             entries.add(ModBlocks.PURPLE_COMPRESSED_WOOL);
                             entries.add(ModBlocks.MAGENTA_COMPRESSED_WOOL);
                             entries.add(ModBlocks.PINK_COMPRESSED_WOOL);
-                            entries.add(ModBlocks.COMPRESSED_TERRACOTTA);
                             entries.add(ModBlocks.COMPRESSED_WHITE_TERRACOTTA);
                             entries.add(ModBlocks.COMPRESSED_LIGHT_GRAY_TERRACOTTA);
                             entries.add(ModBlocks.COMPRESSED_GRAY_TERRACOTTA);

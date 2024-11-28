@@ -9,6 +9,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.util.Identifier;
 
 import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
@@ -298,7 +299,10 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         getOrCreateTagBuilder(BlockTags.WOOL).add(block);
         getOrCreateTagBuilder(ModTags.Blocks.CAT_PLAYS_WITH).add(block);
     }
-    for(Block block : ModBlocks.ALL_COMPACTED_TERRACOTTA_BLOCKS) {
+    for(Block block : ModBlocks.COMPACTED_TERRACOTTA) {
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+    }
+    for(Block block : ModBlocks.ALL_COLORED_COMPACTED_TERRACOTTA_BLOCKS) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
     }
     for(Block block : ModBlocks.TROPICAL_FISH_BLOCKS) {
@@ -404,6 +408,27 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .addTag(ModTags.Blocks.ANY_MINABLE)
+                .addOptional(Identifier.tryParse("squashed:acorn_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:amber_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:artichoke_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:banana_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:cerulean_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:fuchsia_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:grape_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:indigo_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:maroon_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:mauve_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:mint_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:mold_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:navy_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:peach_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:periwinkle_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:sage_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:sap_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:shamrock_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:velvet_dye_block"))
+                .addOptional(Identifier.tryParse("squashed:vermilion_dye_block"))
+
                 .add(ModBlocks.BLAZE_POWDER_BLOCK)
                 .add(ModBlocks.WHEAT_SEED_BLOCK)
                 .add(ModBlocks.PUMPKIN_SEED_BLOCK)

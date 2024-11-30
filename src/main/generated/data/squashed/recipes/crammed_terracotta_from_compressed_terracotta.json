@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "squashed:terracotta",
+  "key": {
+    "#": {
+      "item": "squashed:compressed_terracotta"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "squashed:crammed_terracotta"
+  },
+  "show_notification": true
+}

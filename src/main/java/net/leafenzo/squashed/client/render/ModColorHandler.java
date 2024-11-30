@@ -3,6 +3,7 @@ package net.leafenzo.squashed.client.render;
 
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.leafenzo.squashed.block.ModBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.color.world.GrassColors;
@@ -13,7 +14,10 @@ public class ModColorHandler {
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> pos != null && world != null ? BiomeColors.getFoliageColor(world, pos) : FoliageColors.getDefaultColor(), //0.5 and 1.0 are the defaults for grass color (Source: BlockColors line 49)
                 ModBlocks.VINE_BLOCK
         );
-
+        for(Block block : ModBlocks.COMPACTED_GRASS_BLOCK) {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> pos != null && world != null ? BiomeColors.getGrassColor(world, pos) : GrassColors.getDefaultColor(), block);
+            ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorProviderRegistry.BLOCK.get(((BlockItem) stack.getItem()).getBlock()).getColor(((BlockItem) stack.getItem()).getBlock().getDefaultState(), null, null, tintIndex), block);
+        }
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> pos != null && world != null ? BiomeColors.getGrassColor(world, pos) : GrassColors.getColor(0.5, 1.0), //0.5 and 1.0 are the defaults for grass color (Source: BlockColors line 49)
                 ModBlocks.GRASS_CLIPPINGS_BLOCK,
                 ModBlocks.FERN_BLOCK

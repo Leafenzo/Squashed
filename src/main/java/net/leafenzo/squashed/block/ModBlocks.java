@@ -34,7 +34,7 @@ public class ModBlocks {
     public static final HashMap<Block, Integer> COMPRESSION_TIER_FROM_BLOCK = new HashMap<Block, Integer>();
     public static final ArrayList<Block> TROPICAL_FISH_BLOCKS = new ArrayList<Block>();
     public static final ArrayList<Block> DYE_BLOCKS = new ArrayList<Block>();
-    public static final ArrayList<Block> ALL_COMPACTED_TERRACOTTA_BLOCKS = new ArrayList<Block>();
+    public static final ArrayList<Block> ALL_COLORED_COMPACTED_TERRACOTTA_BLOCKS = new ArrayList<Block>();
     public static final ArrayList<Block> ALL_COMPACTED_WOOL_BLOCKS = new ArrayList<Block>();
 
 
@@ -160,6 +160,12 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.GRANITE).strength(1.5f, 6.0f).requiresTool().instrument(Instrument.BASEDRUM)),
             new Block(FabricBlockSettings.copyOf(Blocks.GRANITE).strength(1.5f, 6.0f).requiresTool().instrument(Instrument.BASEDRUM)),
             new Block(FabricBlockSettings.copyOf(Blocks.GRANITE).strength(2.0f, 99.0f).requiresTool().instrument(Instrument.BASEDRUM))
+    );
+    public static final Block[] COMPACTED_TERRACOTTA = registerCompactedBlockSet("terracotta",
+            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.PACKED_MUD).strength(2.0f, 6.0f).requiresTool().instrument(Instrument.BASEDRUM)),
+            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.PACKED_MUD).strength(2.0f, 6.0f).requiresTool().instrument(Instrument.BASEDRUM)),
+            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.PACKED_MUD).strength(3.0f, 6.0f).requiresTool().instrument(Instrument.BASEDRUM)),
+            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.PACKED_MUD).strength(3.0f, 99.0f).requiresTool().instrument(Instrument.BASEDRUM))
     );
     public static final Block[] COMPACTED_DIRT = registerCompactedBlockSet("dirt",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT).strength(0.8f)),
@@ -400,7 +406,6 @@ public class ModBlocks {
     public static final Block BLACK_DYE_BLOCK = registerBlock("black_dye_block", createDyeBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).strength(0.3f).sounds(BlockSoundGroup.FROGSPAWN))/*,ModItemGroups.SQUASHED*/);
     //TODO add mint compat for more dye blocks
 
-    public static final Block COMPRESSED_TERRACOTTA = registerBlock("compressed_terracotta", new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.BASEDRUM).requiresTool().strength(2f,6f).sounds(BlockSoundGroup.PACKED_MUD))/*,ModItemGroups.SQUASHED*/);
     public static final Block COMPRESSED_WHITE_TERRACOTTA = registerBlock("compressed_white_terracotta", createCompressedTerracottaBlock(DyeColor.WHITE)/*,ModItemGroups.SQUASHED*/);
     public static final Block COMPRESSED_ORANGE_TERRACOTTA = registerBlock("compressed_orange_terracotta", createCompressedTerracottaBlock(DyeColor.ORANGE)/*,ModItemGroups.SQUASHED*/);
     public static final Block COMPRESSED_MAGENTA_TERRACOTTA = registerBlock("compressed_magenta_terracotta", createCompressedTerracottaBlock(DyeColor.MAGENTA)/*,ModItemGroups.SQUASHED*/);
@@ -681,12 +686,12 @@ public class ModBlocks {
     }
     private static Block createCompressedTerracottaBlock(DyeColor color) {
         Block block = new Block(FabricBlockSettings.copyOf(Blocks.WHITE_TERRACOTTA).mapColor(color).requiresTool().strength(2f,6f).sounds(BlockSoundGroup.PACKED_MUD).instrument(Instrument.BASEDRUM));
-        ALL_COMPACTED_TERRACOTTA_BLOCKS.add(block);
+        ALL_COLORED_COMPACTED_TERRACOTTA_BLOCKS.add(block);
         return block;
     }
 
 
-    private static Block createDyeBlock(FabricBlockSettings settings) {
+    public static Block createDyeBlock(FabricBlockSettings settings) {
         Block block = new Block(settings.instrument(Instrument.FLUTE));
         DYE_BLOCKS.add(block);
         return block;
@@ -711,7 +716,7 @@ public class ModBlocks {
     }
 
     private static ToIntFunction<BlockState> createLightLevelFromProperty(int litLevel, BooleanProperty property) {
-        return state -> state.get(property) != false ? litLevel : 0;
+        return state -> state.get(property) ? litLevel : 0;
     }
 
     public static void registerModBlocks() {

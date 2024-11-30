@@ -91,7 +91,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(reverseId+"_from_"+compactingId));
 
         ShapedRecipeJsonBuilder.create(compactingCategory, compactItem)
-                .input(Character.valueOf('#'), baseItem)
+                .input('#', baseItem)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
@@ -103,7 +103,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static void offerReversibleStackingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem, String compactingId, @Nullable String compactingGroup, String reverseId, @Nullable String reverseGroup) {
         ShapelessRecipeJsonBuilder.create(reverseCategory, baseItem, 3).input(compactItem).group(reverseGroup).criterion(RecipeProvider.hasItem(compactItem), RecipeProvider.conditionsFromItem(compactItem)).offerTo(exporter, new Identifier(reverseId+"_from_"+compactingId));
         ShapedRecipeJsonBuilder.create(compactingCategory, compactItem)
-                .input(Character.valueOf('#'), baseItem)
+                .input('#', baseItem)
                 .pattern(" # ")
                 .pattern(" # ")
                 .pattern(" # ")
@@ -118,7 +118,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static void offerReversible2x2CompactingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem, String compactingId, @Nullable String compactingGroup, String reverseId, @Nullable String reverseGroup) {
         ShapelessRecipeJsonBuilder.create(reverseCategory, baseItem, 4).input(compactItem).group(reverseGroup).criterion(RecipeProvider.hasItem(compactItem), RecipeProvider.conditionsFromItem(compactItem)).offerTo(exporter, new Identifier(reverseId+"_from_"+compactingId));
         ShapedRecipeJsonBuilder.create(compactingCategory, compactItem)
-                .input(Character.valueOf('#'), baseItem)
+                .input('#', baseItem)
                 .pattern("##")
                 .pattern("##")
                 .group(compactingGroup)
@@ -135,8 +135,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     public static void offerTropicalFishBlockVariantRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 8)
-                .input(Character.valueOf('F'), ModBlocks.TROPICAL_FISH_BLOCK_A)
-                .input(Character.valueOf('I'), input)
+                .input('F', ModBlocks.TROPICAL_FISH_BLOCK_A)
+                .input('I', input)
                 .pattern("FFF")
                 .pattern("FIF")
                 .pattern("FFF")
@@ -219,6 +219,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.MUD, ModBlocks.COMPACTED_MUD);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.MOSS_BLOCK, ModBlocks.COMPACTED_MOSS_BLOCKS);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.CLAY, ModBlocks.COMPACTED_CLAY);
+        offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.TERRACOTTA, ModBlocks.COMPACTED_TERRACOTTA);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.MAGMA_BLOCK, ModBlocks.COMPACTED_MAGMA_BLOCKS);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.SNOW_BLOCK, ModBlocks.COMPACTED_SNOW_BLOCKS);
         offerNamingSafeReversibleCompactingRecipes(exporter, Blocks.BASALT, ModBlocks.COMPACTED_BASALT);
@@ -293,7 +294,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.GREEN_WOOL, ModBlocks.GREEN_COMPRESSED_WOOL);
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.RED_WOOL, ModBlocks.RED_COMPRESSED_WOOL);
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.BLACK_WOOL, ModBlocks.BLACK_COMPRESSED_WOOL);
-        offerNamingSafeReversibleCompactingRecipes(exporter, Items.TERRACOTTA, ModBlocks.COMPRESSED_TERRACOTTA);
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.WHITE_TERRACOTTA, ModBlocks.COMPRESSED_WHITE_TERRACOTTA);
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.ORANGE_TERRACOTTA, ModBlocks.COMPRESSED_ORANGE_TERRACOTTA);
         offerNamingSafeReversibleCompactingRecipes(exporter, Items.MAGENTA_TERRACOTTA, ModBlocks.COMPRESSED_MAGENTA_TERRACOTTA);

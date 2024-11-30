@@ -29,7 +29,7 @@ public class GunpowderBlock extends FallingBlock {
 
     public GunpowderBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)this.getDefaultState().with(UNSTABLE, false));
+        this.setDefaultState(this.getDefaultState().with(UNSTABLE, false));
     }
 
     @Override
@@ -69,12 +69,12 @@ public class GunpowderBlock extends FallingBlock {
         PrimedGunpowderEntity primedGunpowderEntity = new PrimedGunpowderEntity(world, (double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, igniter);
         world.spawnEntity(primedGunpowderEntity);
         world.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_LAVA_EXTINGUISH, SoundCategory.BLOCKS, 0.55f, 2.0f);
-        world.emitGameEvent((Entity)igniter, GameEvent.PRIME_FUSE, pos); // not entirely sure what this is used for, but it might be important so I'm keeping it even if I've changed the sound
+        world.emitGameEvent(igniter, GameEvent.PRIME_FUSE, pos); // not entirely sure what this is used for, but it might be important so I'm keeping it even if I've changed the sound
     }
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (!world.isClient() && !player.isCreative() && state.get(UNSTABLE).booleanValue()) {
+        if (!world.isClient() && !player.isCreative() && state.get(UNSTABLE)) {
             this.primeExplosion(world, pos, null);
         }
         super.onBreak(world, pos, state, player);

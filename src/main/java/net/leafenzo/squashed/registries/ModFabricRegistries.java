@@ -173,8 +173,8 @@ public class ModFabricRegistries {
 
     private static void registerCompactedFuels(FuelRegistry registry, ItemConvertible[] compactedItems, int burnTimePerOne) {
         for (int i = 0; i < compactedItems.length; i++) {
-            Double d = new Double(burnTimePerOne * Math.pow(9,(i+1)));
-            int t = Math.min(d.intValue(), 32767);
+            double d = burnTimePerOne * Math.pow(9, (i + 1));
+            int t = Math.min((int) d, 32767);
 //                System.out.println("registering burn time of: " + t + " ticks for " + compactedItems[i].asItem().getName());
             registry.add(compactedItems[i], t);
         }

@@ -30,7 +30,7 @@ public class FallingBlockPlacementDispenserBehavior
             try {
                 this.setSuccess(((BlockItem)item).place(new AutomaticItemPlacementContext((World)pointer.getWorld(), blockPos, direction, stack, direction2)).isAccepted());
             } catch (Exception exception) {
-                LOGGER.error("Error trying to place block at {}", (Object)blockPos, (Object)exception); //literally copied this over just
+                LOGGER.error("Error trying to place block at {}", blockPos, exception); //literally copied this over just
             }
         }
         return stack;
